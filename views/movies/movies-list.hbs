@@ -1,0 +1,38 @@
+<nav><a href="/film">Go Back</a></nav>
+<div>
+    <div>
+        <img src="{{result.image}}" alt="{{result.title}}">
+    </div>
+    <div>
+        <div>
+            <h1>
+                {{result.title}}
+            </h1>
+            <h3>
+                Director: {{result.director}}
+            </h3>
+        </div>
+        <div>
+            <h3>
+                Stars:
+            </h3>
+            <ul>{{#each result.stars}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            <h3>Description</h3>
+            <p>
+                {{result.description}}
+            </p>
+        </div>
+        <div>
+            <h3>Show times:</h3>
+            <ul>{{#each result.showtimes}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
